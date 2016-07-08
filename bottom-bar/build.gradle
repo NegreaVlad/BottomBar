@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
 
 ext {
     bintrayRepo = 'maven'
@@ -44,11 +46,8 @@ dependencies {
     testCompile 'junit:junit:' + rootProject.ext.junitVersion
 }
 
-apply plugin: 'com.github.dcendents.android-maven'
 
 group = publishedGroupId                               // Maven Group ID for the artifact
-
-apply plugin: 'com.jfrog.bintray'
 
 version = libraryVersion
 
